@@ -951,52 +951,69 @@ table tr.highlight td { background: #FFF3F3; font-weight: 600; color: var(--maro
     <div class="card">
       <!-- NAP: tokenize the 5 fields. Conflict box is EDIT (remove if no NAP conflict). -->
       <div class="card-label"><span class="dot red"></span> NAP Audit</div>
-      <div style="font-size:0.82rem;line-height:1.8">
-        <div><strong>Name:</strong> 1st National Roofing</div>
-        <div><strong>Address:</strong> 11340 Lakefield Dr #250</div>
-        <div><strong>City:</strong> Duluth, GA 30097</div>
-        <div><strong>Phone:</strong> (404) 500-7663</div>
-        <div><strong>URL:</strong> 1stnationalroofing.net</div>
+      <div style="font-size:0.82rem;line-height:1.9;margin-bottom:0.75rem">
+        <div style="display:flex;gap:0.4rem"><span style="color:var(--muted);min-width:52px">Name</span><strong>1st National Roofing</strong></div>
+        <div style="display:flex;gap:0.4rem"><span style="color:var(--muted);min-width:52px">Address</span><strong>11340 Lakefield Dr #250</strong></div>
+        <div style="display:flex;gap:0.4rem"><span style="color:var(--muted);min-width:52px">City</span><strong>Duluth, GA 30097</strong></div>
+        <div style="display:flex;gap:0.4rem"><span style="color:var(--muted);min-width:52px">Phone</span><strong>(404) 500-7663</strong></div>
+        <div style="display:flex;gap:0.4rem"><span style="color:var(--muted);min-width:52px">URL</span><strong>1stnationalroofing.net</strong></div>
       </div>
       <!-- EDIT: NAP conflict callout — delete this block if there is no conflict -->
-      <div style="margin-top:0.75rem;background:var(--red-light);border-radius:6px;padding:0.5rem;font-size:0.75rem;color:var(--red)">
-        <strong>Conflict &mdash; 6+ Directories:</strong> Old address &ldquo;1220 Old Alpharetta Rd&rdquo; appearing in EZlocal, USCity.net, iGlobal, ShowMeLocal, n49, Tupalo &mdash; incorrect for current Duluth, GA location
+      <div style="background:var(--red-light);border-radius:6px;padding:0.55rem 0.75rem;font-size:0.75rem;color:var(--red);display:flex;align-items:center;gap:0.5rem">
+        <span style="font-size:0.9rem;flex-shrink:0">⚠</span>
+        <span><strong>Address conflict:</strong> &ldquo;1220 Old Alpharetta Rd&rdquo; still active in 6 directories</span>
       </div>
       <!-- /EDIT -->
     </div>
     <div class="card">
       <!-- EDIT: Google Reviews. If GBP unverified use big-stat warning "Not Verified"; else show rating + count. -->
       <div class="card-label"><span class="dot green"></span> Google Reviews</div>
-      <div class="big-stat warning" style="font-size:2rem">4.8</div>
-      <div class="stat-sub">267 reviews · 4.8/5.0 · 24/7 emergency response</div>
-      <div style="margin-top:0.75rem;font-size:0.78rem;color:var(--muted)">
-        A 4.8-star rating across 267 reviews is a genuine competitive asset. Facility managers checking vendors before signing maintenance contracts will find this immediately reassuring — but only if the GBP listing is accurate and appears in local results.
+      <div class="big-stat warning" style="font-size:2.4rem;line-height:1;margin-bottom:0.25rem">4.8</div>
+      <div style="font-size:0.78rem;color:var(--muted);margin-bottom:1rem">out of 5.0</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem">
+        <div style="background:var(--light-gray);border-radius:6px;padding:0.55rem 0.7rem">
+          <div style="font-size:1.1rem;font-weight:800;color:var(--green)">267</div>
+          <div style="font-size:0.68rem;color:var(--muted)">Total Reviews</div>
+        </div>
+        <div style="background:var(--light-gray);border-radius:6px;padding:0.55rem 0.7rem">
+          <div style="font-size:1.1rem;font-weight:800;color:var(--green)">24/7</div>
+          <div style="font-size:0.68rem;color:var(--muted)">Emergency Response</div>
+        </div>
       </div>
       <!-- /EDIT -->
     </div>
     <div class="card">
       <!-- EDIT: Online presence rating (POOR/FAIR/GOOD) + active/issues/missing breakdown -->
       <div class="card-label"><span class="dot red"></span> Online Presence</div>
-      <div class="big-stat sm danger">POOR</div>
-      <div class="stat-sub">31 of 37 listings need correction</div>
-      <div style="margin-top:0.75rem">
-        <div style="font-size:0.78rem;color:var(--text)">Connected: <strong style="color:var(--green)">Cylex &check;</strong></div>
-        <div style="font-size:0.78rem;color:var(--text)">Issues: <strong style="color:var(--amber)">EZlocal, Facebook, USCity, iGlobal, ShowMeLocal, n49, Tupalo (wrong address)</strong></div>
-        <div style="font-size:0.78rem;color:var(--text)">Missing: <strong style="color:var(--red)">Bing, YP.com, HotFrog, YellowPages + 11 more</strong></div>
+      <div class="big-stat sm danger" style="margin-bottom:0.25rem">POOR</div>
+      <div class="stat-sub" style="margin-bottom:1rem">31 of 37 listings need correction</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;text-align:center">
+        <div style="background:var(--green-light);border-radius:6px;padding:0.6rem 0.25rem">
+          <div style="font-size:1.3rem;font-weight:800;color:var(--green)">1</div>
+          <div style="font-size:0.65rem;color:var(--green);font-weight:600">Connected</div>
+        </div>
+        <div style="background:var(--amber-light);border-radius:6px;padding:0.6rem 0.25rem">
+          <div style="font-size:1.3rem;font-weight:800;color:var(--amber)">7</div>
+          <div style="font-size:0.65rem;color:var(--amber);font-weight:600">With Issues</div>
+        </div>
+        <div style="background:var(--red-light);border-radius:6px;padding:0.6rem 0.25rem">
+          <div style="font-size:1.3rem;font-weight:800;color:var(--red)">12+</div>
+          <div style="font-size:0.65rem;color:var(--red);font-weight:600">Missing</div>
+        </div>
       </div>
       <!-- /EDIT -->
     </div>
     <div class="card">
       <!-- EDIT: Key listing status. badge green/amber/red per listing. REPEAT row per directory. -->
       <div class="card-label"><span class="dot amber"></span> Key Listing Status</div>
-      <div style="font-size:0.82rem;line-height:2">
-        <div style="display:flex;justify-content:space-between"><span>Google Business Profile</span><span class="badge green">Active · 4.8★</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Cylex</span><span class="badge green">Connected</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Facebook</span><span class="badge amber">Issues &mdash; wrong address</span></div>
-        <div style="display:flex;justify-content:space-between"><span>EZlocal / USCity / iGlobal</span><span class="badge amber">Old address showing</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Bing Places</span><span class="badge red">Not Present</span></div>
-        <div style="display:flex;justify-content:space-between"><span>YP.com / YellowPages</span><span class="badge red">Not Present</span></div>
-        <div style="display:flex;justify-content:space-between"><span>Apple Maps</span><span class="badge amber">Unavailable</span></div>
+      <div style="display:flex;flex-direction:column;gap:0.45rem;margin-top:0.25rem">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">Google Business Profile</span><span class="badge green">Active · 4.8★</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">Cylex</span><span class="badge green">Connected</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">Facebook</span><span class="badge amber">Wrong address</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">EZlocal · USCity · iGlobal</span><span class="badge amber">Wrong address</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">Bing Places</span><span class="badge red">Not Present</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">YP.com / YellowPages</span><span class="badge red">Not Present</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.8rem"><span style="color:var(--text)">Apple Maps</span><span class="badge amber">Unavailable</span></div>
       </div>
       <!-- /EDIT -->
     </div>
